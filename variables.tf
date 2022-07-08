@@ -4,12 +4,6 @@ variable "region" {
   default     = "us-east-1"
 }
 
-variable "profile" {
-  description = "profile for ec2"
-  type = string
-  default = "myaws"
-}
-
 variable "vpc_name" {
   description = "Name of VPC"
   type        = string
