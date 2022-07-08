@@ -1,13 +1,3 @@
-provider "aws" {
-  region = var.region
-  profile = var.profile
-
-  default_tags {
-    tags = {
-      hashicorp-learn = "module-use"
-    }
-  }
-}
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
