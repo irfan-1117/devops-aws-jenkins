@@ -1,7 +1,7 @@
-variable "vpc_name" {
-  description = "Name of VPC"
+variable "region" {
+  description = "region for vpc"
   type        = string
-  default     = "example-vpc"
+  default     = "us-east-1"
 }
 
 variable "vpc_cidr" {
@@ -13,7 +13,7 @@ variable "vpc_cidr" {
 variable "vpc_azs" {
   description = "Availability zones for VPC"
   type        = list(string)
-  default     = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  default     = ["us-east-1a", "us-east-2b", "us-east-2c"]
 }
 
 variable "vpc_private_subnets" {
@@ -41,4 +41,16 @@ variable "vpc_tags" {
     Terraform   = "true"
     Environment = "dev"
   }
+}
+
+variable "ami" {
+  description = "ami for the ec2"
+  type        = string
+  default     =  "ami-052efd3df9dad4825"
+}
+
+variable "instance_type" {
+  description = "ec2 instance"
+  type        = string
+  default     = "t2.micro"
 }
